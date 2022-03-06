@@ -1,0 +1,66 @@
+###
+POST http://localhost:4000/api/products HTTP/1.1
+Content-Type: application/json
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjQzNDg1MjA4LCJleHAiOjE2NDM1NzE2MDh9.sb-_yudZtHQk9p_6DSjZ8qRZAS49g4MvqNfGkq8F2P0
+
+{
+    "name": "Manguera",
+    "category_id": 1,
+    "description": "Los asdf asdfe asdf asdsdfewe asdfasdf asdfasdf asdf",
+    "available": false,
+    "price": {
+        "unitPrice": null,
+        "totalPrice": 24,
+        "visible": true
+    }
+}
+
+###
+GET http://localhost:4000/api/products?page=0&size=31&order_by=created_at&order_direction=desc HTTP/1.1
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjQyNzA4MDEyLCJleHAiOjE2NDI3OTQ0MTJ9.oVwYjW5NzH1TUfSctgSycRAnsBL6G6ZyVsR9Fpx1PjE
+
+###
+GET http://localhost:4000/api/products/1 HTTP/1.1
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjQzMzU0MTkxLCJleHAiOjE2NDM0NDA1OTF9.LLOH4HUAgJ66agiWASgW1uiw9GJNjMrwzXYHB-5KIYg
+
+###
+GET http://localhost:4000/api/products/c/AXFq0002 HTTP/1.1
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjQyNzA4MDEyLCJleHAiOjE2NDI3OTQ0MTJ9.oVwYjW5NzH1TUfSctgSycRAnsBL6G6ZyVsR9Fpx1PjE
+
+###
+PUT http://localhost:4000/api/products/1 HTTP/1.1
+Content-Type: application/json
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjQzMzU0NjI0LCJleHAiOjE2NDM0NDEwMjR9.4R9LDRVcNuDkq_8IFLKVMBcaNu9MtciQ-vj0gn53JKI
+
+{
+    "product":{
+        "name": "Manguera",
+        "category_id": 2,
+        "description": "Los asdf asdfe asdf asdsdfewe asdfasdf asdfasdf asdf",
+        "available": true,
+        "price": {
+            "unitPrice": null,
+            "totalPrice": 500,
+            "visible": false
+        }
+    }
+}
+
+###
+DELETE  http://localhost:4000/api/products/10 HTTP/1.1
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjQyNzA4MDEyLCJleHAiOjE2NDI3OTQ0MTJ9.oVwYjW5NzH1TUfSctgSycRAnsBL6G6ZyVsR9Fpx1PjE
+
+###
+GET http://localhost:4000/api/products/category/a/1?page=0&size=3&order_by=created_at&order_direction=desc HTTP/1.1
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjQzMzU0NjI0LCJleHAiOjE2NDM0NDEwMjR9.4R9LDRVcNuDkq_8IFLKVMBcaNu9MtciQ-vj0gn53JKI
+
+###
+GET http://localhost:4000/api/products/category/na/1?page=0&size=3&order_by=created_at&order_direction=desc HTTP/1.1
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjQzMzU0NjI0LCJleHAiOjE2NDM0NDEwMjR9.4R9LDRVcNuDkq_8IFLKVMBcaNu9MtciQ-vj0gn53JKI
+
+###
+GET http://localhost:4000/api/products/category/1?page=0&size=3&order_by=created_at&order_direction=desc HTTP/1.1
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjQzMzU0NjI0LCJleHAiOjE2NDM0NDEwMjR9.4R9LDRVcNuDkq_8IFLKVMBcaNu9MtciQ-vj0gn53JKI
+
+###
+GET http://localhost:4000/api/products/images/names/7
